@@ -24,14 +24,14 @@ changelog:
       - '^docs:'
       - '^test:'
 
-dockers:
-  -
-    goos: linux
-    goarch: amd64
-    dockerfile: "./releaseDockerfile"
-    image_templates:
-      - "docker.io/mariobassem/gridproxy:{{ .Tag }}"
-    extra_files:
-      - ygg_entrypoint.sh
-      - rootfs
+# dockers:
+#   -
+#     goos: linux
+#     goarch: amd64
+#     dockerfile: "./releaseDockerfile"
+#     image_templates:
+#       - "docker.io/mariobassem/gridproxy:{{ .Tag }}"
+#     extra_files:
+#       - ygg_entrypoint.sh
+#       - rootfs
 
