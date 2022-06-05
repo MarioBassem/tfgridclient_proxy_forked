@@ -23,9 +23,10 @@ changelog:
       - '^test:'
 
 dockers:
-  goos: linux
-  goarch: amd64
-  dockerfile: "./releaseImage/Dockerfile"
-  image_templates:
-    - "docker.io/mariobassem/gridproxy:{{ .Tag }}"
+  -
+    goos: linux
+    goarch: amd64
+    dockerfile: "./releaseImage/Dockerfile"
+    image_templates:
+      - "docker.io/mariobassem/gridproxy:{{ .Tag }}"
 
