@@ -28,6 +28,7 @@ RUN wget https://github.com/threefoldtech/zinit/releases/download/v0.2.6/zinit -
     && chmod +x /sbin/zinit
 
 #copy bin file from host
+COPY server ./server
 RUN mv server /usr/bin/server
 
 COPY ygg_entrypoint.sh /etc/ygg_entrypoint.sh
