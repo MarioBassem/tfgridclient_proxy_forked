@@ -12,7 +12,7 @@ builds:
     goarch:
       - amd64
     ldflags:
-      - -X main.GitCommit={{ $(git rev-list -1 HEAD) }}
+      - -X main.GitCommit={{ .Commit }}
     main: ./cmds/proxy_server
     binary: server
 
