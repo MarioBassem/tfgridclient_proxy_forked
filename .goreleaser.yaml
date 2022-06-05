@@ -12,6 +12,7 @@ builds:
     ldflags:
       - -X main.GitCommit={{ .Tag }}
     main: ./cmds/proxy_server
+    binary: server
 
 checksum:
   name_template: 'checksums.txt'
