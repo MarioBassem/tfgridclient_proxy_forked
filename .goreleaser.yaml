@@ -31,4 +31,7 @@ dockers:
     dockerfile: "./releaseDockerfile"
     image_templates:
       - "docker.io/mariobassem/gridproxy:{{ .Tag }}"
+    extra_files:
+      - ygg_entrypoint.sh
+      - rootfs
 
