@@ -1,0 +1,5 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/mariobassem/codescalers/tfgridclient_proxy_forked'
+go mod vendor; swag init -g internal/explorer/server.go --parseVendor; rm -rf vendor
+make: Leaving directory '/home/mariobassem/codescalers/tfgridclient_proxy_forked'
+ 

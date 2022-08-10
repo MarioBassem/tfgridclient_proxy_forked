@@ -12,10 +12,12 @@ builds:
     goarch:
       - amd64
     ldflags:
-      - -X main.GitCommit={{ .Commit }}
+      - -X main.GitCommit={{ .Tag }}
     main: ./cmds/proxy_server
     binary: server
 
+checksum:
+  name_template: 'checksums.txt'
 
 changelog:
   sort: asc
@@ -24,14 +26,14 @@ changelog:
       - '^docs:'
       - '^test:'
 
-# dockers:
-#   -
-#     goos: linux
-#     goarch: amd64
-#     dockerfile: "./releaseDockerfile"
-#     image_templates:
-#       - "docker.io/mariobassem/gridproxy:{{ .Tag }}"
-#     extra_files:
-#       - ygg_entrypoint.sh
-#       - rootfs
+dockers:
+  -
+    goos: linux
+    goarch: amd64
+    dockerfile: "./releaseDockerfile"
+    image_templates:
+      - "docker.io/mariobassem/gridproxy:{{ .Tag }}"
+    extra_files:
+      - ygg_entrypoint.sh
+      - rootfs
 
